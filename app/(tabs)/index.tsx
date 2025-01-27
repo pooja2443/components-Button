@@ -6,13 +6,12 @@ const App = () => {
     alert("Button Pressed");
   };
 
-  return (
-    
+  return ( 
     <View style={styles.container}>
      
       <ImageBackground
         source={{
-          uri: "https://i.postimg.cc/j2LVwKPX/picture.avif",
+          uri: "https://i.postimg.cc/cJy8FLJv/yellow-background.avif",
         }}
         style={styles.imageBackground}>
 
