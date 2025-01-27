@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      {/* Image outside of the button */}
+     
       <Image
         source={{
           uri: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
@@ -16,7 +16,6 @@ const App = () => {
         style={styles.image}
       />
       
-      {/* Touchable Button */}
       <TouchableOpacity style={styles.fab} onPress={onPressHandler}>
         <Text style={styles.fabText}>Like</Text>
       </TouchableOpacity>
@@ -31,18 +30,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   fab: {
-    backgroundColor: "#FF5722", // Orange color for the FAB
-    width: 120, // Width of the button
-    height: 50, // Height of the button
-    borderRadius: 5, // Rounded corners for the button
+    backgroundColor: "#FF5722", 
+    width: 120, 
+    height: 50, 
+    borderRadius: 5, 
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 20, // Space between the button and image
-    shadowColor: "#000", // Shadow effect for the button
+    marginTop: 20, 
+    shadowColor: "#000", 
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 5,
-    elevation: 5, // For Android shadow
+    elevation: 5, 
   },
   fabText: {
     color: "white",
@@ -50,9 +49,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   image: {
-    width: 100, // Image size
-    height: 100, // Image size
-    resizeMode: "contain", // Ensures the image fits properly
+    width: 100, 
+    height: 100, 
+    resizeMode: "contain", 
   },
 });
 
