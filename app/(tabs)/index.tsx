@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Text, StyleSheet, View, Button } from "react-native";
+import { Text, StyleSheet, View, Button, Touchable, TouchableOpacity } from "react-native";
 
 const App = () => {
   const onPressHandler = () =>{
@@ -8,20 +8,32 @@ const App = () => {
   }
 
   return (
-    <View style={styles.container}>
-      {/* <Text style={styles.textStyle}>BUTTON</Text> */}
-      <View style={styles.btnContainer}>
-      <Button
-        title="click"
-        onPress= {onPressHandler}
-      />
-      </View>
+    <View style={styles.fab}>
+      <TouchableOpacity onPress={onPressHandler}>
+    
+        <Text style={styles.fabText}>Like</Text>
+      </TouchableOpacity>
      
     </View>
   )
 }
 
 const styles = StyleSheet.create({
+  fab: {
+    backgroundColor: "#FF5722",
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    bottom: 20,
+    right: 20,
+  },
+  fabText: {
+    color: "white",
+    fontSize: 24,
+  },  
   container: {
     flex:1,
     justifyContent: "center",
