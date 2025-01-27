@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, TouchableOpacity, Image } from "react-native";
+import { Text, StyleSheet, View, TouchableOpacity, Image, ImageBackground } from "react-native";
 
 const App = () => {
   const onPressHandler = () => {
@@ -7,18 +7,20 @@ const App = () => {
   };
 
   return (
+    
     <View style={styles.container}>
      
-      <Image
+      <ImageBackground
         source={{
-          uri: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+          uri: "https://i.postimg.cc/j2LVwKPX/picture.avif",
         }}
-        style={styles.image}
-      />
-      
-      <TouchableOpacity style={styles.fab} onPress={onPressHandler}>
+        style={styles.imageBackground}>
+
+        <TouchableOpacity style={styles.fab} onPress={onPressHandler}>
         <Text style={styles.fabText}>Like</Text>
-      </TouchableOpacity>
+        </TouchableOpacity>
+
+        </ImageBackground>
     </View>
   );
 };
@@ -28,6 +30,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  imageBackground: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center", // Center the button
   },
   fab: {
     backgroundColor: "#FF5722", 
